@@ -4,7 +4,7 @@ import {URL} from './api'
 axios.defaults.baseURL = URL
 axios.defaults.withCredentials = true;
 
-export const getRequest = ({url, params}) => axios.get(url, {params, withCredentials: true }).then(res => res.data)
+export const getRequest = ({url, params}) => axios.get(url, {params }).then(res => res.data)
 
 
 export const postRequest = (url, {arg}) => axios.post(url, arg.data, {params: arg.params}).then(res => res.data)
